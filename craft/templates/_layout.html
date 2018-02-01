@@ -9,42 +9,14 @@
  # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
  #}
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
-	<meta charset="utf-8" />
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-	<link rel="home" href="{{ siteUrl }}" />
+ {% include "_head" %}
+ {% include "_header" %}
 
-	{% includeCssFile "styles/main.css" %}	
+	<main id="content" role="main">
+		{% block content %}
+			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+		{% endblock %}
+	</main>
 
-	<style type="text/css">
-		
-	</style>
-</head>
-
-<body>
-	<div id="container">
-		<header id="header">
-			<h1>Hi, I’m Jenny — web designer, bicycle rider, enthusiastic coder,  snow lover & quiet achiever.</h1>
-
-			<nav>
-				<ul>
-					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main id="content" role="main">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
-
-		<footer id="footer">
-			Copyright {{ now.year }}. All rights reserved
-		</footer>
-	</div>
-</body>
-</html>
+{% include "_footer" %}
