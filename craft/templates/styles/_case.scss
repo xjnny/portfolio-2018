@@ -1,0 +1,20 @@
+@import "grid";
+
+.project {
+    &__title {
+        margin-top: $row*3;
+    }
+    &__subtitle {
+        margin-bottom: $row;
+    }
+    &__image {
+        margin-bottom: $row;
+        margin-top: $row;
+        width: 100%;
+    }
+    &__paragraph {
+        margin-bottom: $row;
+        max-width: 436px;
+    }
+}
+

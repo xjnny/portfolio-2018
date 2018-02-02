@@ -1,0 +1,24 @@
+.header {
+    &-intro__container {
+    }
+    &__logo-container {
+        margin-top: $row;
+    }
+    &__blurb {
+        max-width: 740px;
+        margin-top: $row*6;
+        margin-bottom: $row*10;
+    }
+    &__background-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        max-width: 74%;
+    }
+    &__me-image {
+        position: absolute;
+        top: 280px;
+        left: 61%;
+    }
+}

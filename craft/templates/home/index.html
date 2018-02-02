@@ -12,9 +12,35 @@
 
 {% extends "_layout" %}
 {% set title = "Home" %}
-{% includeCssFile "../styles/main.css" %}	
 
 {% block content %}
-	<h1>Hi, I’m Jenny — web designer, bicycle rider, enthusiastic coder,  snow lover & quiet achiever.</h1>
-	
+{% for header in craft.entries.section('home').find() %}
+<div class="header-intro__container">
+	<div class="header__background">
+			<img class="header__background-image" src="{{ header.landscapeImage.first().url() }}" alt="Beautiful snowy mountain scenery." />
+		
+	</div>
+	<h1 class="header__blurb">{{ header.blurb }}</h1>
+	<div class="header__me">
+			<img class="header__me-image" src="{{ header.meImage.first().url() }}" alt="Picture of the designer standing wearing ski gear.">
+	</div>
+</div>
+{% endfor %}
+
+<div class="case__container">
+{% for entry in craft.entries.section('caseStudies').find() %}
+	<article>
+		<a href="{{ entry.url }}">
+			
+			<img src="{{ entry.coverImage.first().url() }}" />
+			<p>{{ entry.title }}</p>
+		</a>
+	</article>
+{% endfor %}
+</div>
+
+
 {% endblock %}
+
+
+

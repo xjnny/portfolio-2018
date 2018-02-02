@@ -13,7 +13,9 @@ return array(
 	'siteUrl' => null,
 
 	// Environment-specific variables (see https://craftcms.com/docs/multi-environment-configs#environment-specific-variables)
-	'environmentVariables' => array(),
+	'environmentVariables' => array(
+		'baseUrl'  => 'http://localhost:8888/portfolio/public/',
+	),
 
 	// Default Week Start Day (0 = Sunday, 1 = Monday...)
 	'defaultWeekStartDay' => 0,
@@ -28,7 +30,7 @@ return array(
 	'cpTrigger' => 'admin',
 
 	// Dev Mode (see https://craftcms.com/support/dev-mode)
-	'devMode' => false,
+	'devMode' => true,
 
 	// Remove “index.php” from URLs
 	// 'omitScriptNameInUrls' => true,

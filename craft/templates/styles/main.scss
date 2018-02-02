@@ -1,4 +1,7 @@
-* {
-    color:pink;
-    font-family: cursive;
-}
+@import "typography";
+@import "colours";
+@import "footer";
+@import "grid";
+@import "case";
+@import "header";
+@import "home";

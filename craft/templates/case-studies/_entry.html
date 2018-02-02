@@ -1,5 +1,5 @@
 {#
-    # News entry template
+    # Case Study entry template
     # -------------------
     #
     # This template gets loaded whenever a News entry’s URL is
@@ -12,14 +12,19 @@
     # See this page for more details on how Craft routes requests:
     # http://craftcms.com/docs/routing
     #}
-    {% includeCssFile "../../styles/main.css" %}	
+
    {% extends "_layout" %}
    
    {% block content %}
-       <article>
-           <h1>{{ entry.title }}</h1>
-           <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-           {{ entry.body }}
+       <article class="project__container">
+           <h1 class="project__title">{{ entry.title }}</h1>
+           <h4 class="project__subtitle">{{ entry.subtitle }}</h4>
+           <img class="project__image" src="{{ entry.firstImage.first().url() }}" />
+           <p class="project__paragraph">{{ entry.firstParagraph }}</p>
+           <img class="project__image" src="{{ entry.secondImage.first().url() }}" />
+           <p class="project__paragraph">{{ entry.secondParagraph }}</p>
+           <img class="project__image" src="{{ entry.thirdImage.first().url() }}" />
+           <p class="project__paragraph">{{ entry.thirdParagraph }}</p>
        </article>
    {% endblock %}
    

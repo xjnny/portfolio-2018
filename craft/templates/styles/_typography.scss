@@ -1,0 +1,53 @@
+@import "colours";
+
+* {
+    font-family: "GT Walsheim";
+}
+
+h1 {
+    font-size: 48px;
+    color: $black;
+    font-weight: normal;
+    line-height: 1.5;
+    cursor: default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+h2 {
+    font-size: 36px;
+    color: $black;
+    font-weight: normal;
+    line-height: 1.5;
+    cursor: default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+h3 {
+    font-size: 31px;
+    color: $black;
+    font-weight: normal;
+    line-height: 1.5;
+    cursor: default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+h4 {
+    font-size: 25px;
+    color: $darkgrey;
+    font-weight: normal;
+    line-height: 1.5;
+    cursor: default;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+p {
+    font-size: 18px;
+    color: $black;
+    font-weight: normal;
+    line-height: 1.5;
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+}

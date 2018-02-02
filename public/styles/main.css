@@ -1,3 +1,97 @@
 * {
-  color: pink;
-  font-family: cursive; }
+  font-family: "GT Walsheim"; }
+
+h1 {
+  font-size: 48px;
+  color: #010101;
+  font-weight: normal;
+  line-height: 1.5;
+  cursor: default;
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
+h2 {
+  font-size: 36px;
+  color: #010101;
+  font-weight: normal;
+  line-height: 1.5;
+  cursor: default;
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
+h3 {
+  font-size: 31px;
+  color: #010101;
+  font-weight: normal;
+  line-height: 1.5;
+  cursor: default;
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
+h4 {
+  font-size: 25px;
+  color: #A3A3A3;
+  font-weight: normal;
+  line-height: 1.5;
+  cursor: default;
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
+p {
+  font-size: 18px;
+  color: #010101;
+  font-weight: normal;
+  line-height: 1.5;
+  cursor: default; }
+
+a {
+  cursor: pointer; }
+
+#footer {
+  cursor: default; }
+
+#container, .header__container {
+  max-width: 82%;
+  margin: 0 auto; }
+
+#container, .header__container {
+  max-width: 82%;
+  margin: 0 auto; }
+
+.project__title {
+  margin-top: 144px; }
+
+.project__subtitle {
+  margin-bottom: 48px; }
+
+.project__image {
+  margin-bottom: 48px;
+  margin-top: 48px;
+  width: 100%; }
+
+.project__paragraph {
+  margin-bottom: 48px;
+  max-width: 436px; }
+
+.header__logo-container {
+  margin-top: 48px; }
+
+.header__blurb {
+  max-width: 740px;
+  margin-top: 288px;
+  margin-bottom: 480px; }
+
+.header__background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  max-width: 74%; }
+
+.header__me-image {
+  position: absolute;
+  top: 280px;
+  left: 61%; }
+
+.case__container {
+  position: relative; }
