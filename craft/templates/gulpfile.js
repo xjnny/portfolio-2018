@@ -4,7 +4,9 @@ sass = require('gulp-sass'),
 coffee = require('gulp-coffee'),
 connect = require('gulp-connect'),
 uglify = require('gulp-uglify'),
-concat = require('gulp-concat');
+concat = require('gulp-concat'),
+postcss = require('gulp-postcss'),
+tailwindcss = require('tailwindcss');
 
 var coffeeSources = ['scripts/hello.coffee'],
 jsSources = ['scripts/*.js'],
@@ -66,3 +68,13 @@ gulp.src(htmlSources)
 });
 
 gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch']);
+
+
+gulp.task('css', function () {  
+    return gulp.src('../../public/styles/main.css')
+      .pipe(postcss([
+        tailwindcss('./tailwind-config.js'),
+        require('autoprefixer'),
+      ]))
+      .pipe(gulp.dest('build/'));
+  });

@@ -17,23 +17,21 @@
 {% for header in craft.entries.section('home').find() %}
 <div class="header-intro__container">
 	<div class="header__background">
-			<img class="header__background-image" src="{{ header.landscapeImage.first().url() }}" alt="Beautiful snowy mountain scenery." />
-		
+		<img class="header__background-image" src="{{ header.landscapeImage.first().url() }}" alt="Beautiful snowy mountain scenery." />
 	</div>
 	<h1 class="header__blurb">{{ header.blurb }}</h1>
 	<div class="header__me">
-			<img class="header__me-image" src="{{ header.meImage.first().url() }}" alt="Picture of the designer standing wearing ski gear.">
+		<img class="header__me-image" src="{{ header.meImage.first().url() }}" alt="Picture of the designer standing wearing ski gear.">
 	</div>
 </div>
 {% endfor %}
 
 <div class="case__container">
 {% for entry in craft.entries.section('caseStudies').find() %}
-	<article>
-		<a href="{{ entry.url }}">
-			
-			<img src="{{ entry.coverImage.first().url() }}" />
-			<p>{{ entry.title }}</p>
+	<article class="case__wrapper">
+		<a href="{{ entry.url }}">	
+			<img class="case__image" src="{{ entry.coverImage.first().url() }}" />
+			<p class="case__title">{{ entry.title }}</p>
 		</a>
 	</article>
 {% endfor %}
