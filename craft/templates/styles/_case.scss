@@ -17,5 +17,12 @@
         margin-bottom: $row;
         max-width: 436px;
     }
+    &__next-title {
+        margin-top: $row*3;
+    }
+    &__next-entry {
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 

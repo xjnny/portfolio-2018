@@ -1,10 +1,19 @@
 <footer id="footer" class="footer">
+    <div id="footer-scroll" class="footer__arrow"><img src="http://localhost:8888/portfolio/public/assets/images/up-arrow.svg" alt=""></div>
+
    <a href="https://dribbble.com/xj-nny" ><i class="footer__icon fab fa-dribbble"></i></a>
    <a href="https://www.linkedin.com/in/jennycrowther/" ><i class="footer__icon fab fa-linkedin-in"></i></a>
-   <a href="https://www.instagram.com/ynn_jx/" ><i class="footer__icon fab fa-instagram"></i></a>
-    
+   <a href="https://codepen.io/xjenny/" ><i class="footer__icon fab fa-codepen"></i></a>
+
+
+
     <p class="footer__copyright"> Copyright {{ now.year }}. All rights reserved </p>
 </footer>
 </div>
+
+{% includeJsFile "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" %}
+{% includeJsFile "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" %}
+{% includeJsFile "http://localhost:8888/portfolio/public/assets/main.js" %}	
+
 </body>
 </html>

@@ -3,7 +3,15 @@
 .footer {
     margin-top: $row*4;
     margin-bottom: $row*2;
- cursor: default;
+    cursor: default;
+
+    &__arrow {
+        position: fixed;
+        // bottom: 166px;
+        bottom: $row*2;
+        right: 10%;
+        cursor: pointer;
+    }
 
     &__icon {
         color: $black;

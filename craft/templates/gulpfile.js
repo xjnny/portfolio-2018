@@ -76,5 +76,6 @@ gulp.task('css', function () {
         tailwindcss('./tailwind-config.js'),
         require('autoprefixer'),
       ]))
-      .pipe(gulp.dest('build/'));
+      // .pipe(gulp.dest('build/'));
+      .pipe(gulp.dest('../../public/styles/build/'));
   });

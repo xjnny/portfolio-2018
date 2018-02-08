@@ -14,7 +14,9 @@
     #}
 
    {% extends "_layout" %}
-   
+   {% set entries = entry.nextProject %}
+
+
    {% block content %}
        <article class="project__container">
            <h1 class="project__title">{{ entry.title }}</h1>
@@ -25,6 +27,9 @@
            <p class="project__paragraph">{{ entry.secondParagraph }}</p>
            <img class="project__image" src="{{ entry.thirdImage.first().url() }}" />
            <p class="project__paragraph">{{ entry.thirdParagraph }}</p>
+
+           <p class="project__next-title">Next Project</p>
+           <a class="project__next-entry" href="{{ entries.first().url() }}"><h2>{{ entries.first() }}</h2></a>
        </article>
    {% endblock %}
    

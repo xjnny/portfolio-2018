@@ -1,18 +1,11 @@
 @tailwind preflight;
 @tailwind utilities;
-
-// @tailwind preflight;
-// @tailwind utilities;
-
-@import "./tailwind-preflight.css";
- @import "./tailwind-utilities.css";
- 
 * {
   font-family: "GT Walsheim"; }
 
 h1 {
   font-size: 48px;
-  color: #010101;
+  color: #22292f;
   font-weight: normal;
   line-height: 1.5;
   cursor: default;
@@ -21,16 +14,15 @@ h1 {
 
 h2 {
   font-size: 36px;
-  color: #010101;
+  color: #22292f;
   font-weight: normal;
   line-height: 1.5;
-  cursor: default;
   margin-top: 12px;
   margin-bottom: 12px; }
 
 h3 {
   font-size: 31px;
-  color: #010101;
+  color: #22292f;
   font-weight: normal;
   line-height: 1.5;
   cursor: default;
@@ -39,7 +31,7 @@ h3 {
 
 h4 {
   font-size: 25px;
-  color: #afafaf;
+  color: #b8c2cc;
   font-weight: normal;
   line-height: 1.5;
   cursor: default;
@@ -48,12 +40,13 @@ h4 {
 
 p {
   font-size: 18px;
-  color: #010101;
+  color: #22292f;
   font-weight: normal;
   line-height: 1.5;
   cursor: default; }
 
 a {
+  color: #22292f;
   cursor: pointer; }
 
 #container, .header__container {
@@ -64,14 +57,19 @@ a {
   margin-top: 192px;
   margin-bottom: 96px;
   cursor: default; }
+  .footer__arrow {
+    position: fixed;
+    bottom: 96px;
+    right: 10%;
+    cursor: pointer; }
   .footer__icon {
-    color: #010101;
+    color: #22292f;
     padding-right: 12px;
     font-size: 24px; }
   .footer__copyright {
     margin-top: 48px;
     font-size: 16px;
-    color: #afafaf;
+    color: #b8c2cc;
     font-weight: lighter; }
 
 #container, .header__container {
@@ -98,13 +96,20 @@ a {
   margin-bottom: 48px;
   max-width: 436px; }
 
+.project__next-title {
+  margin-top: 144px; }
+
+.project__next-entry {
+  text-decoration: none;
+  cursor: pointer; }
+
 .header__logo-container {
   margin-top: 48px; }
 
 .header__blurb {
   max-width: 740px;
   margin-top: 288px;
-  margin-bottom: 480px; }
+  margin-bottom: 288px; }
 
 .header__background-image {
   position: absolute;
@@ -116,14 +121,54 @@ a {
 .header__me-image {
   position: absolute;
   top: 280px;
-  left: 61%; }
+  left: 61%;
+  height: 672px; }
+
+.home .header__cross {
+  display: none; }
+
+.caseStudies .header__cross {
+  position: relative;
+  top: -22px;
+  left: 98%; }
+  .caseStudies .header__cross img {
+    width: 18px;
+    height: 18px; }
+
+.links {
+  text-decoration: none;
+  margin-right: 48px;
+  font-size: 25px;
+  font-weight: normal; }
+  .links__container {
+    margin-bottom: 144px; }
+  .links__icon {
+    padding-right: 18px; }
 
 .case__container {
-  position: relative; }
+  display: flex;
+  justify-content: space-between; }
+
+.case__column {
+  width: 47%;
+  display: flex;
+  flex-direction: column; }
+
+.case__link {
+  text-decoration: none; }
 
 .case__wrapper {
-  width: 496px;
-  height: 288px; }
+  margin-bottom: 96px; }
 
 .case__image {
-  width: 100%; }
+  width: 100%;
+  transition: .6s ease; }
+  .case__image:hover {
+    transform: scale(1.07); }
+
+.case__image-container {
+  transition: .6s;
+  overflow: hidden; }
+
+.case__title {
+  cursor: pointer; }

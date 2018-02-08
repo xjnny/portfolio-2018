@@ -18,7 +18,6 @@ h2 {
     color: $black;
     font-weight: normal;
     line-height: 1.5;
-    cursor: default;
     margin-top: 12px;
     margin-bottom: 12px;
 }
@@ -49,5 +48,6 @@ p {
 }
 
 a {
+    color: $black;
     cursor: pointer;
 }
