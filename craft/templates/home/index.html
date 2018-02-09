@@ -16,7 +16,7 @@
 
 
 {% block content %}
-{% for header in craft.entries.section('home').find() %}
+{% for header in craft.entries.section('homepage').find() %}
 <div class="header-intro__container">
 	<div class="header__background">
 		<img class="header__background-image" src="{{ header.landscapeImage.first().url() }}" alt="Beautiful snowy mountain scenery." />
