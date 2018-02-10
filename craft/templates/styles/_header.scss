@@ -8,13 +8,43 @@
         max-width: 740px;
         margin-top: $row*6;
         margin-bottom: $row*6;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 480px;
+            margin-top: 308px;
+            font-size: 38px;
+        }
+
+        @media screen and (max-width: 520px) {
+            font-size: 32px;
+            max-width: 360px;
+            margin-bottom: $row*2;
+        }
     }
-    &__background-image {
+    &__background {
         position: absolute;
         top: 0;
         right: 0;
+        width: 80vw;
+        height: 98vh;
+        max-height: 750px;
         z-index: -1;
-        max-width: 74%;
+        overflow: hidden;
+
+        @media screen and (min-width: 1750px) {
+            width: 70vw;
+        }
+        @media screen and (max-width: 520px) {
+            width: 100vw;
+            top: 0;
+        }
+    }
+    &__background-image {
+        background: url("http://localhost:8888/portfolio/public/assets/images/header.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        background-position: center bottom;
     }
     &__me-image {
         position: absolute;

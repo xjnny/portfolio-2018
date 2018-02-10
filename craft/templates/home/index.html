@@ -17,29 +17,29 @@
 
 {% block content %}
 {% for header in craft.entries.section('homepage').find() %}
-<div class="header-intro__container">
-	<div class="header__background">
-		<img class="header__background-image" src="{{ header.landscapeImage.first().url() }}" alt="Beautiful snowy mountain scenery." />
-	</div>
+<div class="header__background fade">
+		<div class="header__background-image"> </div>
+		
+	<!-- <img class="header__background-image" src="{{ header.landscapeImage.first().url() }}" alt="Beautiful snowy mountain scenery." /> -->
+</div>
+<div class="header-intro__container fade-delay">
+	
 	<h1 class="header__blurb">{{ header.blurb }}</h1>
 	<div class="header__me">
-		<img class="header__me-image" src="{{ header.meImage.first().url() }}" alt="Picture of the designer standing wearing ski gear.">
+		<!-- <img class="header__me-image" src="{{ header.meImage.first().url() }}" alt="Picture of the designer standing wearing ski gear."> -->
 	</div>
 </div>
 {% endfor %}
 
 <div class="links__container">
-	<a class="links" href=""><span class="links__icon">☺</span>Get in touch</a><a class="links" href=""><span class="links__icon">📝</span>Take a look at my CV</a>
+	<a class="links" href="mailto:jennylcrowther@gmail.com"><span class="links__icon">☺</span>Get in touch</a><a class="links" href="/portfolio/public/assets/CV_JennyCrowther.pdf"><span class="links__icon">📝</span>Take a look at my CV</a>
 </div>
 
 <div class="case__container grid">
 {% for row in craft.entries.section('caseStudies')|batch(3) %}
 <div class="case__column">
-		{% for entry in row %}
-        
-   
-
-	<article class="case__wrapper grid-item">
+	{% for entry in row %}
+	<article class="case__wrapper reveal">
 		<a class="case__link" href="{{ entry.url }}">	
 			<div class="case__image-container">
 				<img class="case__image" src="{{ entry.coverImage.first().url() }}" />
@@ -49,8 +49,6 @@
 	</article>
 	{% endfor %}
 </div>
-
-
 {% endfor %}
 </div>
 

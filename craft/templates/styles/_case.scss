@@ -15,14 +15,28 @@
     }
     &__paragraph {
         margin-bottom: $row;
-        max-width: 436px;
+        max-width: none;
+        @media screen and (min-width: 540px) {
+            max-width: 436px;
+        }
     }
     &__next-title {
         margin-top: $row*3;
+        margin-bottom: 6px;
     }
     &__next-entry {
         text-decoration: none;
         cursor: pointer;
+
+        h2 {
+        display: inline-block;
+        transition: 0.3s;
+        margin-top: 0;
+            
+            &:hover {
+                color: $blue;
+            }
+        }    
     }
 }
 

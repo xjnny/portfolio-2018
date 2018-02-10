@@ -50,4 +50,8 @@ p {
 a {
     color: $black;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        color: $blue;
+    }
 }

@@ -18,18 +18,23 @@
 
 
    {% block content %}
-       <article class="project__container">
-           <h1 class="project__title">{{ entry.title }}</h1>
-           <h4 class="project__subtitle">{{ entry.subtitle }}</h4>
-           <img class="project__image" src="{{ entry.firstImage.first().url() }}" />
-           <p class="project__paragraph">{{ entry.firstParagraph }}</p>
-           <img class="project__image" src="{{ entry.secondImage.first().url() }}" />
-           <p class="project__paragraph">{{ entry.secondParagraph }}</p>
-           <img class="project__image" src="{{ entry.thirdImage.first().url() }}" />
-           <p class="project__paragraph">{{ entry.thirdParagraph }}</p>
-
-           <p class="project__next-title">Next Project</p>
-           <a class="project__next-entry" href="{{ entries.first().url() }}"><h2>{{ entries.first() }}</h2></a>
-       </article>
+    <article class="project__container">
+        <h1 class="project__title fade-delay">{{ entry.title }}</h1>
+        <h4 class="project__subtitle fade-delay">{{ entry.subtitle }}</h4>
+        <div class="reveal">
+            <img class="project__image" src="{{ entry.firstImage.first().url() }}" />
+            <p class="project__paragraph">{{ entry.firstParagraph }}</p>
+        </div>
+        <div class="reveal">
+            <img class="project__image" src="{{ entry.secondImage.first().url() }}" />
+            <p class="project__paragraph">{{ entry.secondParagraph }}</p>
+        </div>
+        <div class="reveal">
+            <img class="project__image" src="{{ entry.thirdImage.first().url() }}" />
+            <p class="project__paragraph">{{ entry.thirdParagraph }}</p>
+        </div>
+        <p class="project__next-title">Next Project</p>
+        <a class="project__next-entry" href="{{ entries.first().url() }}"><h2>{{ entries.first() }}</h2></a>
+    </article>
    {% endblock %}
    

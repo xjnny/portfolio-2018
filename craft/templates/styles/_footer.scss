@@ -1,9 +1,13 @@
 @import "grid";
 
 .footer {
-    margin-top: $row*4;
+    margin-top: $row*2;
     margin-bottom: $row*2;
     cursor: default;
+
+    @media screen and (min-width: 680px) {
+        margin-top: $row*4;
+    }
 
     &__arrow {
         position: fixed;
@@ -15,8 +19,12 @@
 
     &__icon {
         color: $black;
-        padding-right: 12px;
-        font-size: 24px;
+        padding-right: 16px;
+        font-size: 22px;
+        transition: 0.3s;
+        &:hover {
+            color: $blue;
+        }
     }
 
     &__copyright {

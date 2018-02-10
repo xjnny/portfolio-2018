@@ -1,23 +1,15 @@
 var gulp = require('gulp'),
 gutil = require('gulp-util'),
 sass = require('gulp-sass'),
-coffee = require('gulp-coffee'),
 connect = require('gulp-connect'),
 uglify = require('gulp-uglify'),
-concat = require('gulp-concat'),
-postcss = require('gulp-postcss'),
-tailwindcss = require('tailwindcss');
+concat = require('gulp-concat');
 
-var coffeeSources = ['scripts/hello.coffee'],
-jsSources = ['scripts/*.js'],
+var jsSources = ['scripts/*.js'],
 sassSources = ['styles/*.scss'],
 htmlSources = ['**/*.html'],
 outputDir = 'assets';
 
-
-gulp.task('log', function() {
-gutil.log('== My First Task ==')
-});
 
 gulp.task('copy', function() {
 gulp.src('index.html')
@@ -28,17 +20,10 @@ gulp.task('sass', function() {
 gulp.src(sassSources)
 .pipe(sass({style: 'expanded'}))
 .on('error', gutil.log)
-//.pipe(gulp.dest('assets'))
 .pipe(gulp.dest('../../public/styles/'))
 .pipe(connect.reload())
 });
 
-gulp.task('coffee', function() {
-gulp.src(coffeeSources)
-.pipe(coffee({bare: true})
-.on('error', gutil.log))
-.pipe(gulp.dest('scripts'))
-});
 
 gulp.task('js', function() {
 gulp.src(jsSources)
@@ -49,7 +34,6 @@ gulp.src(jsSources)
 });
 
 gulp.task('watch', function() {
-gulp.watch(coffeeSources, ['coffee']);
 gulp.watch(jsSources, ['js']);
 gulp.watch(sassSources, ['sass']);
 gulp.watch(htmlSources, ['html']);
@@ -67,15 +51,4 @@ gulp.src(htmlSources)
 .pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch']);
-
-
-gulp.task('css', function () {  
-    return gulp.src('../../public/styles/main.css')
-      .pipe(postcss([
-        tailwindcss('./tailwind-config.js'),
-        require('autoprefixer'),
-      ]))
-      // .pipe(gulp.dest('build/'));
-      .pipe(gulp.dest('../../public/styles/build/'));
-  });
+gulp.task('default', ['html',  'js', 'sass', 'connect', 'watch']);
