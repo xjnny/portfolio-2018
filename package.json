@@ -4,7 +4,7 @@
   "description": "Welcome to Craft CMS!",
   "main": "index.js",
   "scripts": {
-    "start": "node ../public/assets/main.js",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
